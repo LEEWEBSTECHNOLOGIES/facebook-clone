@@ -13,7 +13,7 @@ const Header = () => {
                <input type="text" placeholder="Search Facebook" />
             </div>
         </div>
-        <div className="header__middle">
+        <div className="header__center">
             <div className="header__option">
                 <Home fontSize="large" />
             </div>
