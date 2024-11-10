@@ -1,6 +1,6 @@
 import "./header.css";
 import logo from "../../images/facebook_logo.png";
-import { Add, Group, Home, OndemandVideo, People, Search, Storefront } from "@mui/icons-material";
+import { Add, ExpandMore, Forum, Group, Home, NotificationsActive, OndemandVideo, People, Search, Storefront } from "@mui/icons-material";
 import { Avatar, IconButton } from "@mui/material";
 
 const Header = () => {
@@ -37,6 +37,15 @@ const Header = () => {
             </div>
             <IconButton>
                 <Add />
+            </IconButton>
+            <IconButton>
+                <Forum />
+            </IconButton>
+            <IconButton>
+                <NotificationsActive />
+            </IconButton>
+            <IconButton>
+                <ExpandMore />
             </IconButton>
         </div>
     </div>
