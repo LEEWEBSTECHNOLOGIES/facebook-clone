@@ -1,20 +1,22 @@
 import "./header.css";
 import logo from "../../images/facebook_logo.png";
-import { Add, ExpandMore, Forum, Group, Home, NotificationsActive, OndemandVideo, People, Search, Storefront } from "@mui/icons-material";
+import { Apps, Group, Home, NotificationsActive, OndemandVideo, People, Search, Storefront } from "@mui/icons-material";
 import { Avatar, IconButton } from "@mui/material";
+import Icon from '@mdi/react';
+import { mdiFacebookMessenger } from '@mdi/js';
 
 const Header = () => {
   return (
     <div className="header">
         <div className="header__left">
-            <img src={logo} alt="" />
+            <img className="logo" src={logo} alt="" />
             <div className="header__input">
                <Search />
                <input type="text" placeholder="Search Facebook" />
             </div>
         </div>
         <div className="header__center">
-            <div className="header__option">
+            <div className="header__option header__option--active">
                 <Home fontSize="large" />
             </div>
             <div className="header__option">
@@ -31,22 +33,29 @@ const Header = () => {
             </div>            
         </div>
         <div className="header__right">
+            <IconButton className="apps">
+                <Apps />
+            </IconButton>
+            {/* <IconButton>
+                <Forum />
+            </IconButton> */}
+            <IconButton>
+            <Icon path={mdiFacebookMessenger} size={1} />
+                {/* <NotificationsActive /> */}
+            </IconButton>
+            <IconButton>
+            <NotificationsActive />
+            </IconButton>
+            {/* <IconButton>
+                <ExpandMore />
+            </IconButton> */}
             <div className="header__info">
                 <Avatar />
                 <h4>Ali Ajibade</h4>
             </div>
-            <IconButton>
+            {/* <IconButton>
                 <Add />
-            </IconButton>
-            <IconButton>
-                <Forum />
-            </IconButton>
-            <IconButton>
-                <NotificationsActive />
-            </IconButton>
-            <IconButton>
-                <ExpandMore />
-            </IconButton>
+            </IconButton> */}
         </div>
     </div>
   )

@@ -1,6 +1,6 @@
 .header {
     display: flex;
-    padding: 15px 20px;
+    padding: 5px 10px;
     justify-content: space-between;
     background-color: #fff;
     position: sticky;
@@ -11,6 +11,7 @@
 
 .header__left {
     display: flex;
+    align-items: center;
     justify-content: space-evenly;
 }
 .header__left > img {
@@ -38,6 +39,14 @@
     justify-content: center;
 }
 
+.header__option--active > .MuiSvgIcon-root {
+    color: #2e81f4;
+}
+
+.header__option--active {
+    border-bottom: 4px solid #2e81f4;
+}
+
 .header__option > .MuiSvgIcon-root {
     color: gray;
 }
@@ -51,4 +60,29 @@
     align-items: center;
     padding: 0 30px;
     cursor: pointer;
+}
+
+.header__option:hover {
+   background-color: #eff2f5;
+   border-radius: 10px;
+   align-items: center;
+   padding: 0 30px;
+   border-bottom: none;
+}
+
+.header__info {
+    display: flex;
+    align-items: center;
+}
+
+.header__info > h4 {
+    margin-left: 10px;
+}
+
+.header__right {
+    display: flex;
+}
+
+.header__right > .apps {
+    position: relative;
 }
