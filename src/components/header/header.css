@@ -18,6 +18,10 @@
     height: 40px;
 }
 
+.header__left > .logo {
+    cursor: pointer;
+}
+
 .header__input {
     display: flex;
     align-items: center;
