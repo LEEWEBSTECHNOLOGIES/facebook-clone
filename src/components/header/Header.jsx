@@ -51,7 +51,7 @@ const Header = () => {
             </IconButton> */}
             <div className="header__info">
                 <Avatar />
-                <h4>Ali Ajibade</h4>
+                <h4>Mark Zuckerberg</h4>
             </div>
             {/* <IconButton>
                 <Add />
