@@ -1,19 +1,27 @@
 import { Avatar } from "@mui/material";
 import "./messageSender.css";
 import { InsertEmoticon, PhotoLibrary, Videocam } from "@mui/icons-material";
+import { useState } from "react";
 
 const MessageSender = () => {
+    const [input, setInput] = useState("");
+    const [imageUrl, setImageURL] = useState("");
+
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        // Some clever db stuff
+        setInput("");
+        setImageURL("");
 
     };
   return (
     <div className="messageSender">
         <div className="messageSender__top">
             <Avatar />
-            <form action="">
-                <input type="text" placeholder="What's on your mind, Ali?" />
-                <input type="text" placeholder="image URL (Optional)" />
+            <form>
+                <input className="messageSender__input" value={input} onChange={(e) => setInput(e.target.value)} placeholder={`What's on your mind, Ali?`} />
+                <input value={imageUrl} onChange={(e) => setImageURL(e.target.value)} placeholder="image URL (Optional)" />
                 <button onClick={handleSubmit} type="submit">Hidden Submit</button>
             </form>
         </div>
