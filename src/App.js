@@ -1,6 +1,7 @@
 import Feed from "./components/feed/Feed";
 import Header from "./components/header/Header";
 import Sidebar from "./components/sidebar/Sidebar";
+import "./app.css";
 
 // BEM (Block Element Modifier) Naming Convention
 function App() {
