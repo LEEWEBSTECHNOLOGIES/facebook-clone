@@ -2,17 +2,26 @@ import Feed from "./components/feed/Feed";
 import Header from "./components/header/Header";
 import Sidebar from "./components/sidebar/Sidebar";
 import "./app.css";
+import Widget from "./components/widget/Widget";
+import Login from "./components/login/Login";
 
 // BEM (Block Element Modifier) Naming Convention
 function App() {
+  const user = null;
   return (
     <div className="app">
-      <Header />
-        <div className="app__body">
+      {!user ? (
+        <Login />
+      ) : (
+        <>
+          <Header />
+          <div className="app__body">
           <Sidebar />
           <Feed />
-          {/* Widgets */}
+          <Widget />
         </div>
+        </>
+      )}      
     </div>
   );
 }
