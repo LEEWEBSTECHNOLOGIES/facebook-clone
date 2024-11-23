@@ -2,11 +2,17 @@ import "./login.css";
 import logo from "../../images/facebook_logo.png";
 import logo2 from "../../images/Facebook-Logo.wine.svg";
 import { Button } from "@mui/material";
+import { auth, provider } from "../../firebase";
 
 const Login = () => {
     const signIn = () => {
         // sign in...
-    }
+        auth.signInWithPopup(provider)
+        .then(result => {
+          console.log(result);
+        })
+        .catch((error) => alert(error.message));
+    };
   return (
     <div className="login">
         <div className="login__logo">
