@@ -4,8 +4,10 @@ import { Apps, Group, Home, NotificationsActive, OndemandVideo, People, Search, 
 import { Avatar, IconButton } from "@mui/material";
 import Icon from '@mdi/react';
 import { mdiFacebookMessenger } from '@mdi/js';
+import { useStateValue } from "../../StateProvider";
 
 const Header = () => {
+    const [{user}, dispatch] = useStateValue();
   return (
     <div className="header">
         <div className="header__left">
@@ -50,8 +52,8 @@ const Header = () => {
                 <ExpandMore />
             </IconButton> */}
             <div className="header__info">
-                <Avatar />
-                <h4>Mark Zuckerberg</h4>
+                <Avatar src={user.photoURL} />
+                <h4>{user.displayName}</h4>
             </div>
             {/* <IconButton>
                 <Add />

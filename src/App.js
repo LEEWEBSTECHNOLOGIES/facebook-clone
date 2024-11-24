@@ -4,10 +4,11 @@ import Sidebar from "./components/sidebar/Sidebar";
 import "./app.css";
 import Widget from "./components/widget/Widget";
 import Login from "./components/login/Login";
+import { useStateValue } from "./StateProvider";
 
 // BEM (Block Element Modifier) Naming Convention
 function App() {
-  const user = null;
+  const [{user}, dispatch] = useStateValue();
   return (
     <div className="app">
       {!user ? (
