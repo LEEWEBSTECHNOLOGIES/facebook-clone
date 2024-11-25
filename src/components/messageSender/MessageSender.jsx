@@ -7,7 +7,8 @@ import db from "../../firebase";
 import firebase from "firebase/compat/app";
 
 const MessageSender = () => {
-    const [{user}, dispatch] = useStateValue();
+    // eslint
+    const [{user}] = useStateValue();
     const [input, setInput] = useState("");
     const [imageUrl, setImageURL] = useState("");
 
@@ -16,8 +17,7 @@ const MessageSender = () => {
 
         db.collection("posts").add({
             message: input,
-            timestamp: firebase.firestore.FieldValue.
-            serverTimestamp(),
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
             profilePic: user.photoURL,
             username: user.displayName,
             image: imageUrl
